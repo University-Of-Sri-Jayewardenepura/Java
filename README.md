@@ -1,129 +1,47 @@
-### **1. Introduction to Java Programming**
+# Object-Oriented Programming with Java
 
-- **Evolution of Java**
-- **Java Features**  
-  - Simple, Portable, Object-oriented, Robust, High-performance, Dynamic, Secure, Multithreaded, Architecture-Neutral, Distributed.
-- **Java Workflow**  
-  - JVM, JRE, JDK.
-- **Basic Syntax**  
-  - Classes, Methods (`main` method), Comments (single-line, multi-line, Javadoc), Identifiers.
-- **Compilation and Execution**  
-  - `javac` and `java` commands.
-- **User Input**  
-  - `Scanner` class.
+Course material for the Java programming module at the University of Sri Jayewardenepura.
 
----
+## Repository Structure
 
-### **2. Data Types and Operators in Java**
-- **Data Types**  
-  - Primitive (`int`, `float`, `double`, `boolean`, `char`).  
-  - Non-primitive (`String`, `Array`, Objects).  
-- **Type Casting**  
-  - Widening (Implicit) and Narrowing (Explicit).  
-- **Operators**  
-  - Arithmetic, Assignment, Comparison, Logical, Bitwise.
+```
+├── docs/          # Documentation (MDX) — consumed by ICTS docs site
+│   ├── en/        # English (source of truth)
+│   ├── si/        # Sinhala (optional)
+│   └── ta/        # Tamil (optional)
+├── examples/      # Runnable Java source files organized by topic
+└── README.md      # This file
+```
 
----
+## Topics Covered
 
-### **3. Control Statements in Java**
-- **Selection Statements**  
-  - `if-else`, `switch-case`.  
-- **Iteration Statements**  
-  - `for`, `while`, `do-while`, Enhanced `for` loop.  
-- **Jump Statements**  
-  - `break`, `continue`, `return`.  
-- **Methods**  
-  - Definition, Parameters, Arguments, Scope (Method and Block).
+1. Introduction to Java Programming
+2. Data Types and Operators
+3. Control Statements
+4. Introduction to Object Orientation
+5. Classes and Objects
+6. Encapsulation
+7. Arrays
+8. Strings
+9. Inheritance
+10. Polymorphism
+11. Abstraction
+12. Exception Handling and Threading
 
----
+## Running Examples
 
-### **4. Introduction to Object Orientation**
-- **Software Crisis**  
-- **OOP Advantages**  
-  - Modularity, Reusability, Extensibility, Maintainability.  
-- **Core OOP Concepts**  
-  - Objects, Classes, Instantiation, Reuse.  
-- **Attributes and Methods**  
-  - Instance variables, Method calls.  
-- **Four Pillars of OOP**  
-  - Encapsulation, Inheritance, Polymorphism, Abstraction.
+Each topic has a self-contained Java file in the `examples/` directory:
 
----
+```bash
+cd examples/01-introduction
+javac HelloWorld.java
+java HelloWorld
+```
 
-### **5. Basic Object-Oriented Concepts**
-- **Classes and Objects**  
-  - Definition, Instantiation (`new` keyword), Constructors (Default, Parameterized).  
-- **Methods**  
-  - Instance methods, `this` keyword.  
-- **Constructors**  
-  - Purpose, Overloading, `this` keyword usage.  
+## Documentation
 
----
+Full documentation is in the `docs/en/` directory and is published via the [ICTS docs site](https://github.com/University-Of-Sri-Jayewardenepura) as a submodule.
 
-### **6. Encapsulation**
-- **Definition**  
-  - Data hiding, Access modifiers (`public`, `private`, `protected`, default).  
-- **Getter and Setter Methods**  
-- **Class/Static Variables and Methods**  
-  - `static` keyword, Usage scenarios.  
+## License
 
----
-
-### **7. Arrays in Java**
-- **Types of Arrays**  
-  - One-dimensional, Multi-dimensional.  
-- **Declaration and Initialization**  
-- **Common Operations**  
-  - Accessing elements, Looping (`for`, Enhanced `for`), `length` property.  
-
----
-
-### **8. Strings in Java**
-- **String Creation**  
-  - Literal vs. `new` keyword.  
-- **String Methods**  
-  - `length()`, `charAt()`, `concat()`, `substring()`, `toUpperCase()`, etc.  
-- **String Immutability**  
-- **StringBuilder and StringBuffer**  
-  - Mutable strings, Thread safety.  
-
----
-
-### **9. Inheritance**
-- **Definition and Importance**  
-- **Types of Inheritance**  
-  - Single, Multilevel, Hierarchical.  
-- **`super` Keyword**  
-- **Method Overriding**  
-- **Access Modifiers in Inheritance**  
-
----
-
-### **10. Polymorphism**
-- **Types**  
-  - Compile-time (Method Overloading, Constructor Overloading).  
-  - Runtime (Method Overriding).  
-- **Examples**  
-  - Hierarchical inheritance, Superclass reference to subclass objects.  
-
----
-
-### **11. Abstraction**
-- **Definition**  
-  - Hiding implementation details.  
-- **Abstract Classes**  
-  - Syntax, Abstract methods, Constructors.  
-- **Interfaces**  
-  - Syntax, Multiple inheritance, Default and static methods (Java 8+).  
-- **Abstraction vs. Encapsulation**  
-
----
-
-### **12. Exception Handling and Threading**
-- **Exceptions**  
-  - Types: Checked, Unchecked, Errors.  
-  - Handling: `try-catch`, `finally`, `throw`, `throws`.  
-- **Threading**  
-  - Thread lifecycle, Creation (extending `Thread`, implementing `Runnable`).  
-  - Synchronization, Inter-thread communication (`wait`, `notify`).  
-
+University of Sri Jayewardenepura — Faculty of Technology.
