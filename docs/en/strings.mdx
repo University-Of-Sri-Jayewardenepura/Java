@@ -1,0 +1,60 @@
+---
+title: Strings
+description: String creation, common methods, immutability, StringBuilder, and StringBuffer in Java.
+---
+
+# Strings in Java
+
+## String Creation
+
+- **String literal** — `String s = "Hello";` (stored in the string pool).
+- **Using `new`** — `String s = new String("Hello");` (creates a new object on the heap).
+
+## Common String Methods
+
+| Method | Description |
+|--------|-------------|
+| `length()` | Returns the number of characters |
+| `charAt(i)` | Returns the character at index `i` |
+| `concat(s)` | Concatenates another string |
+| `substring(begin, end)` | Extracts a substring |
+| `toUpperCase()` | Converts to uppercase |
+| `toLowerCase()` | Converts to lowercase |
+| `equals(s)` | Compares content for equality |
+| `contains(s)` | Checks if string contains a sequence |
+
+## String Immutability
+
+Strings in Java are **immutable** — once created, their value cannot be changed. Every modification creates a new `String` object.
+
+## StringBuilder and StringBuffer
+
+- **`StringBuilder`** — Mutable string, not thread-safe, faster for single-threaded use.
+- **`StringBuffer`** — Mutable string, thread-safe (synchronized), slightly slower.
+
+## Example
+
+```java
+// StringDemo.java
+// Demonstrates string creation and common string methods in Java.
+
+public class StringDemo {
+	public static void main(String[] args) {
+		// String creation using literal
+		String s = "Hello";
+		// Convert to uppercase
+		System.out.println(s.toUpperCase());
+
+		// String concatenation
+		String s2 = s.concat(" World");
+		System.out.println(s2);
+
+		// StringBuilder for mutable strings
+		StringBuilder sb = new StringBuilder("Java");
+		sb.append(" Programming");
+		System.out.println(sb);
+	}
+}
+```
+
+> Full source: [`examples/08-strings/StringDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/08-strings/StringDemo.java)

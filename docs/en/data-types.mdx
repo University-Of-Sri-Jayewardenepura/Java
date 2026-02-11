@@ -1,0 +1,71 @@
+---
+title: Data Types and Operators
+description: Primitive and non-primitive data types, type casting, and operators in Java.
+---
+
+# Data Types and Operators in Java
+
+## Data Types
+
+### Primitive Types
+
+| Type | Size | Example |
+|------|------|---------|
+| `int` | 4 bytes | `int age = 20;` |
+| `float` | 4 bytes | `float pi = 3.14f;` |
+| `double` | 8 bytes | `double salary = 35000.50;` |
+| `boolean` | 1 bit | `boolean isStudent = true;` |
+| `char` | 2 bytes | `char grade = 'A';` |
+| `byte` | 1 byte | `byte b = 127;` |
+| `short` | 2 bytes | `short s = 32000;` |
+| `long` | 8 bytes | `long l = 100000L;` |
+
+### Non-Primitive Types
+
+Non-primitive types include `String`, `Array`, and user-defined objects. They are reference types that store memory addresses rather than values directly.
+
+## Type Casting
+
+- **Widening (Implicit)** — Smaller type to larger type automatically: `int` to `double`.
+- **Narrowing (Explicit)** — Larger type to smaller type requires a cast: `(int) doubleValue`.
+
+## Operators
+
+- **Arithmetic**: `+`, `-`, `*`, `/`, `%`
+- **Assignment**: `=`, `+=`, `-=`, `*=`, `/=`
+- **Comparison**: `==`, `!=`, `>`, `<`, `>=`, `<=`
+- **Logical**: `&&`, `||`, `!`
+- **Bitwise**: `&`, `|`, `^`, `~`, `<<`, `>>`
+
+## Example
+
+```java
+// DataTypesDemo.java
+// Demonstrates primitive and non-primitive data types in Java.
+
+public class DataTypesDemo {
+	public static void main(String[] args) {
+		// Integer data type
+		int age = 20;
+
+		// Double data type (decimal numbers)
+		double salary = 35000.50;
+
+		// Character data type
+		char grade = 'A';
+
+		// Boolean data type
+		boolean isStudent = true;
+
+		// String (non-primitive data type)
+		String name = "Alice";
+
+		// Print all variables
+		System.out.println("Name: " + name + ", Age: " + age +
+			", Salary: " + salary + ", Grade: " + grade +
+			", Student: " + isStudent);
+	}
+}
+```
+
+> Full source: [`examples/02-data-types/DataTypesDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/02-data-types/DataTypesDemo.java)

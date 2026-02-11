@@ -1,0 +1,88 @@
+---
+title: Control Statements
+description: Selection, iteration, and jump statements along with method definitions in Java.
+---
+
+# Control Statements in Java
+
+## Selection Statements
+
+### if-else
+
+```java
+if (condition) {
+    // executes when condition is true
+} else {
+    // executes when condition is false
+}
+```
+
+### switch-case
+
+```java
+switch (variable) {
+    case value1:
+        // statements
+        break;
+    case value2:
+        // statements
+        break;
+    default:
+        // default statements
+}
+```
+
+## Iteration Statements
+
+- **`for` loop** — Known iteration count.
+- **`while` loop** — Condition checked before each iteration.
+- **`do-while` loop** — Executes at least once, condition checked after.
+- **Enhanced `for` loop** — Iterates over arrays and collections.
+
+## Jump Statements
+
+- `break` — Exits the current loop or switch.
+- `continue` — Skips the current iteration.
+- `return` — Exits the current method.
+
+## Methods
+
+Methods define reusable blocks of code with a name, parameters, and a return type:
+
+```java
+returnType methodName(parameters) {
+    // method body
+    return value;
+}
+```
+
+**Scope** determines where variables are accessible — at the method level or within a block (`{}`).
+
+## Example
+
+```java
+// ControlDemo.java
+// Demonstrates if-else and for loop in Java.
+
+public class ControlDemo {
+	public static void main(String[] args) {
+		// If-else statement
+		int number = 5;
+		if (number > 0) {
+			// Positive number
+			System.out.println("Positive number");
+		} else {
+			// Non-positive number
+			System.out.println("Non-positive number");
+		}
+
+		// For loop
+		for (int i = 1; i <= 3; i++) {
+			// Print i
+			System.out.println("i = " + i);
+		}
+	}
+}
+```
+
+> Full source: [`examples/03-control-statements/ControlDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/03-control-statements/ControlDemo.java)

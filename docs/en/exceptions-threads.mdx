@@ -1,0 +1,92 @@
+---
+title: Exception Handling and Threading
+description: Checked and unchecked exceptions, try-catch-finally, thread lifecycle, and synchronization.
+---
+
+# Exception Handling and Threading
+
+## Exceptions
+
+An exception is an event that disrupts the normal flow of a program.
+
+### Types
+
+- **Checked exceptions** — Verified at compile time (e.g., `IOException`, `SQLException`).
+- **Unchecked exceptions** — Occur at runtime (e.g., `ArithmeticException`, `NullPointerException`).
+- **Errors** — Serious problems not meant to be caught (e.g., `OutOfMemoryError`).
+
+### Handling Exceptions
+
+```java
+try {
+    // code that may throw an exception
+} catch (ExceptionType e) {
+    // handle the exception
+} finally {
+    // always executes, cleanup code
+}
+```
+
+- `throw` — Explicitly throw an exception: `throw new Exception("message");`
+- `throws` — Declare that a method may throw an exception: `void method() throws IOException { }`
+
+## Threading
+
+### Thread Lifecycle
+
+A thread passes through these states: **New**, **Runnable**, **Running**, **Blocked/Waiting**, and **Terminated**.
+
+### Creating Threads
+
+1. **Extending `Thread`** — Override the `run()` method.
+2. **Implementing `Runnable`** — Implement the `run()` method and pass to a `Thread` constructor.
+
+### Synchronization
+
+The `synchronized` keyword prevents multiple threads from accessing shared resources simultaneously.
+
+### Inter-Thread Communication
+
+- `wait()` — Causes the current thread to wait until notified.
+- `notify()` — Wakes up a single waiting thread.
+- `notifyAll()` — Wakes up all waiting threads.
+
+## Example
+
+```java
+// ExceptionThreadDemo.java
+// Demonstrates exception handling and threading in Java.
+
+// Exception handling example
+class ExceptionDemo {
+	public static void main(String[] args) {
+		try {
+			int a = 5 / 0; // This will cause ArithmeticException
+		} catch (ArithmeticException e) {
+			// Handle exception
+			System.out.println("Exception caught: " + e);
+		} finally {
+			// Finally block always executes
+			System.out.println("Finally block executed");
+		}
+	}
+}
+
+// Thread example
+class MyThread extends Thread {
+	public void run() {
+		// Print thread name
+		System.out.println("Thread running: " + getName());
+	}
+}
+
+public class ExceptionThreadDemo {
+	public static void main(String[] args) {
+		// Create and start thread
+		MyThread t = new MyThread();
+		t.start();
+	}
+}
+```
+
+> Full source: [`examples/12-exceptions-threads/ExceptionThreadDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/12-exceptions-threads/ExceptionThreadDemo.java)

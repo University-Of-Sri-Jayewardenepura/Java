@@ -1,0 +1,75 @@
+---
+title: Encapsulation
+description: Data hiding, access modifiers, getter/setter methods, and static members in Java.
+---
+
+# Encapsulation
+
+## Definition
+
+Encapsulation is the practice of bundling data (fields) and the methods that operate on that data into a single class, while restricting direct access to the internal state.
+
+## Access Modifiers
+
+| Modifier | Class | Package | Subclass | World |
+|----------|-------|---------|----------|-------|
+| `public` | Yes | Yes | Yes | Yes |
+| `protected` | Yes | Yes | Yes | No |
+| *default* | Yes | Yes | No | No |
+| `private` | Yes | No | No | No |
+
+## Getter and Setter Methods
+
+- **Getters** return the value of a private field.
+- **Setters** assign a value to a private field, optionally with validation.
+
+## Static Variables and Methods
+
+- **`static` variables** — Shared across all instances of a class.
+- **`static` methods** — Belong to the class rather than any instance. Called via `ClassName.method()`.
+
+## Example
+
+```java
+// EncapsulationDemo.java
+// Demonstrates encapsulation using private variables and getter/setter methods.
+
+class Person {
+	// Private variables (data hiding)
+	private String name;
+	private int age;
+
+	// Getter for name
+	public String getName() {
+		return name;
+	}
+
+	// Setter for name
+	public void setName(String n) {
+		name = n;
+	}
+
+	// Getter for age
+	public int getAge() {
+		return age;
+	}
+
+	// Setter for age
+	public void setAge(int a) {
+		age = a;
+	}
+}
+
+public class EncapsulationDemo {
+	public static void main(String[] args) {
+		// Create Person object and set values
+		Person p = new Person();
+		p.setName("Bob");
+		p.setAge(25);
+		// Print details
+		System.out.println(p.getName() + " is " + p.getAge() + " years old.");
+	}
+}
+```
+
+> Full source: [`examples/06-encapsulation/EncapsulationDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/06-encapsulation/EncapsulationDemo.java)

@@ -1,0 +1,65 @@
+---
+title: Introduction to Object Orientation
+description: The software crisis, OOP advantages, core concepts, and the four pillars of OOP.
+---
+
+# Introduction to Object Orientation
+
+## The Software Crisis
+
+As software systems grew in complexity, procedural programming struggled with maintainability, scalability, and reuse. Object-Oriented Programming (OOP) emerged as a paradigm to address these challenges.
+
+## OOP Advantages
+
+- **Modularity** — Code is organized into self-contained objects.
+- **Reusability** — Classes can be reused across projects.
+- **Extensibility** — New functionality can be added through inheritance.
+- **Maintainability** — Encapsulated code is easier to debug and update.
+
+## Core OOP Concepts
+
+- **Objects** — Instances of classes that hold state (attributes) and behavior (methods).
+- **Classes** — Blueprints that define the structure and behavior of objects.
+- **Instantiation** — The process of creating an object from a class using the `new` keyword.
+
+## Attributes and Methods
+
+- **Instance variables** — Data held by each object.
+- **Methods** — Functions defined inside a class that operate on instance data.
+
+## Four Pillars of OOP
+
+1. **Encapsulation** — Bundling data and methods, restricting direct access.
+2. **Inheritance** — Deriving new classes from existing ones.
+3. **Polymorphism** — Same interface, different implementations.
+4. **Abstraction** — Hiding implementation details, exposing only essentials.
+
+## Example
+
+```java
+// OOPConcepts.java
+// Demonstrates basic OOP concepts: class, object, and method.
+
+// Class definition
+class Dog {
+	// Attribute (instance variable)
+	String name;
+
+	// Method definition
+	void bark() {
+		// Print dog's name and bark
+		System.out.println(name + " says Woof!");
+	}
+}
+
+public class OOPConcepts {
+	public static void main(String[] args) {
+		// Create Dog object
+		Dog d = new Dog();
+		d.name = "Buddy"; // Set name
+		d.bark(); // Call method
+	}
+}
+```
+
+> Full source: [`examples/04-oop-intro/OOPConcepts.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/04-oop-intro/OOPConcepts.java)

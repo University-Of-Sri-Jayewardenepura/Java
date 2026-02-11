@@ -1,0 +1,73 @@
+---
+title: Polymorphism
+description: Compile-time and runtime polymorphism, method overloading and overriding in Java.
+---
+
+# Polymorphism
+
+Polymorphism means "many forms." It allows objects of different classes to be treated through the same interface.
+
+## Compile-Time Polymorphism (Static Binding)
+
+Resolved at compile time through:
+
+- **Method overloading** — Multiple methods with the same name but different parameter lists.
+- **Constructor overloading** — Multiple constructors with different parameters.
+
+```java
+class Calculator {
+    int add(int a, int b) { return a + b; }
+    double add(double a, double b) { return a + b; }
+}
+```
+
+## Runtime Polymorphism (Dynamic Binding)
+
+Resolved at runtime through **method overriding** — a subclass provides its own implementation of a superclass method.
+
+The key mechanism is using a **superclass reference to point to a subclass object**:
+
+```java
+Shape s = new Circle();  // superclass reference, subclass object
+s.draw();                // calls Circle's draw() at runtime
+```
+
+## Example
+
+```java
+// PolymorphismDemo.java
+// Demonstrates compile-time and runtime polymorphism in Java.
+
+// Superclass
+class Shape {
+	void draw() {
+		System.out.println("Drawing a shape");
+	}
+}
+
+// Subclass 1
+class Circle extends Shape {
+	void draw() {
+		System.out.println("Drawing a circle");
+	}
+}
+
+// Subclass 2
+class Square extends Shape {
+	void draw() {
+		System.out.println("Drawing a square");
+	}
+}
+
+public class PolymorphismDemo {
+	public static void main(String[] args) {
+		// Superclass reference to subclass objects
+		Shape s1 = new Circle();
+		Shape s2 = new Square();
+		s1.draw(); // Calls Circle's draw()
+		s2.draw(); // Calls Square's draw()
+	}
+}
+```
+
+> Full source: [`examples/10-polymorphism/PolymorphismDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/10-polymorphism/PolymorphismDemo.java)

@@ -1,0 +1,75 @@
+---
+title: Introduction to Java Programming
+description: Java evolution, features, JVM/JRE/JDK, basic syntax, and compilation workflow.
+---
+
+# Introduction to Java Programming
+
+## Evolution of Java
+
+Java was developed by James Gosling at Sun Microsystems in 1995. It was designed to be platform-independent, following the principle of "Write Once, Run Anywhere" (WORA).
+
+## Java Features
+
+Java is known for being:
+
+- **Simple** — Clean syntax derived from C/C++ with automatic memory management.
+- **Object-Oriented** — Everything revolves around classes and objects.
+- **Platform-Independent** — Bytecode runs on any platform with a JVM.
+- **Robust** — Strong type checking, exception handling, and garbage collection.
+- **Secure** — No explicit pointers, bytecode verification, and a security manager.
+- **Multithreaded** — Built-in support for concurrent programming.
+- **High-Performance** — Just-In-Time (JIT) compilation.
+- **Distributed** — Support for networking via RMI and EJB.
+- **Dynamic** — Runtime class loading and reflection.
+- **Architecture-Neutral** — Fixed-size primitive types across platforms.
+
+## Java Workflow: JVM, JRE, JDK
+
+- **JDK (Java Development Kit)** — Full development environment including compiler (`javac`), debugger, and tools.
+- **JRE (Java Runtime Environment)** — Runtime libraries and the JVM needed to run Java programs.
+- **JVM (Java Virtual Machine)** — Executes Java bytecode on any platform.
+
+## Basic Syntax
+
+A Java program consists of **classes**, **methods**, and **statements**:
+
+- The `main` method is the entry point: `public static void main(String[] args)`.
+- Comments can be single-line (`//`), multi-line (`/* */`), or Javadoc (`/** */`).
+- Identifiers must start with a letter, underscore, or dollar sign.
+
+## Compilation and Execution
+
+```bash
+javac HelloWorld.java   # Compile to bytecode
+java HelloWorld         # Run with JVM
+```
+
+## Example
+
+```java
+// HelloWorld.java
+// This is a simple Java program that prints "Hello, World!" to the console.
+
+public class HelloWorld {
+	// The main method is the entry point of any Java program.
+	public static void main(String[] args) {
+		// Prints Hello, World! to the console.
+		System.out.println("Hello, World!");
+	}
+}
+```
+
+> Full source: [`examples/01-introduction/HelloWorld.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/01-introduction/HelloWorld.java)
+
+## User Input
+
+Java provides the `Scanner` class for reading user input:
+
+```java
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+String name = sc.nextLine();
+int age = sc.nextInt();
+```

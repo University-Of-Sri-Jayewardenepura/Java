@@ -1,0 +1,69 @@
+---
+title: Arrays
+description: One-dimensional and multi-dimensional arrays, declaration, initialization, and common operations.
+---
+
+# Arrays in Java
+
+## Types of Arrays
+
+- **One-dimensional arrays** — A linear sequence of elements of the same type.
+- **Multi-dimensional arrays** — Arrays of arrays (e.g., 2D matrices).
+
+## Declaration and Initialization
+
+```java
+// Declaration and initialization
+int[] numbers = {1, 2, 3, 4, 5};
+
+// Declaration with size
+int[] arr = new int[10];
+
+// 2D array
+int[][] matrix = {
+    {1, 2},
+    {3, 4}
+};
+```
+
+## Common Operations
+
+- **Accessing elements** — `array[index]` (zero-based indexing).
+- **Length** — `array.length` returns the number of elements.
+- **Looping** — Standard `for` loop or enhanced `for` loop.
+
+```java
+// Standard for loop
+for (int i = 0; i < arr.length; i++) { ... }
+
+// Enhanced for loop
+for (int num : numbers) { ... }
+```
+
+## Example
+
+```java
+// ArrayDemo.java
+// Demonstrates one-dimensional and two-dimensional arrays in Java.
+
+public class ArrayDemo {
+	public static void main(String[] args) {
+		// One-dimensional array
+		int[] numbers = {1, 2, 3, 4, 5};
+		// Enhanced for loop to print elements
+		for (int num : numbers) {
+			System.out.println(num);
+		}
+
+		// Two-dimensional array
+		int[][] matrix = {
+			{1, 2},
+			{3, 4}
+		};
+		// Print element at [1][0]
+		System.out.println("Matrix[1][0]: " + matrix[1][0]);
+	}
+}
+```
+
+> Full source: [`examples/07-arrays/ArrayDemo.java`](https://github.com/University-Of-Sri-Jayewardenepura/Java/blob/main/examples/07-arrays/ArrayDemo.java)
