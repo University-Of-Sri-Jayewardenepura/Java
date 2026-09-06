@@ -5,7 +5,7 @@ Course material for the Java programming module at the University of Sri Jayewar
 ## Topics
 
 | # | Topic | Read | Code |
-|---|-------|------|------|
+| --- | --- | --- | --- |
 | 1 | Introduction to Java Programming | [docs/en/introduction.mdx](docs/en/introduction.mdx) | [HelloWorld.java](examples/01-introduction/HelloWorld.java) |
 | 2 | Data Types and Operators | [docs/en/data-types.mdx](docs/en/data-types.mdx) | [DataTypesDemo.java](examples/02-data-types/DataTypesDemo.java) |
 | 3 | Control Statements | [docs/en/control-statements.mdx](docs/en/control-statements.mdx) | [ControlDemo.java](examples/03-control-statements/ControlDemo.java) |
